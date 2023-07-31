@@ -1,0 +1,13 @@
+version: '3'
+services:
+  jenkins_kanboard:
+    image: jenkins/jenkins
+    ports:
+      - "3333:8080"
+    volumes:
+      - jenkins_kanboard_volume:/var/jenkins_home
+    container_name: jenkins_kanboard
+    restart: always
+
+volumes:
+  jenkins_kanboard_volume:
