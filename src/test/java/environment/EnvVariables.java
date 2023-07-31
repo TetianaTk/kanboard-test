@@ -5,7 +5,7 @@ public class EnvVariables {
 
   public final static boolean LOCAL_USAGE = System.getProperty("local") !=null ? Boolean.valueOf(System.getProperty("local")) : true;
 
-  public final static String DATABASE_URL = System.getProperty("dbURL") != null ? System.getProperty("dbURL") : "jdbc:mariadb://localhost:3309/kanboard";
+  public final static String DATABASE_URL = System.getProperty("dbURL") != null ? System.getProperty("dbURL") : "jdbc:mariadb://localhost:3306/kanboard";
   public final static String DATABASE_USER_NAME = "kanboard";
   public final static String DATABASE_PASSWORD = "kanboard-secret";
 

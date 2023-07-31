@@ -1,15 +1,19 @@
 # kanboard-test
 
 ## Commands
-    mvn clean test -DbaseURL=<host> -Dbrowser=<browser name> -Dheadless=<mode> -Dsuite=<suite> -Dlocal=<mode>
-    - [baseURL] - Kanboard host adress (by default http://localhost:80)
-    - [browser] - Selenide browser to test to (by default chrome)
-    - [headless] - Selenide browser launch mode (by default true)
+
+    docker compose up -d
+
+    mvn clean test -Dsuite=<suite> [-DbaseURL=<host>] [-Dbrowser=<browser_name>] [-Dheadless=<mode>] [-Dlocal=<mode>]
+    
     - suite - Tests suites, choice of:
         - api - API methods tests suite
         - ui - UI scenarios tests suite
         - all - api and ui suites
-    - [local] - by default true, for Jankins shold be set as false
+    - [baseURL] - Kanboard host adress (by default http://localhost:80)
+    - [browser] - Selenide browser to test to (by default chrome)
+    - [headless] - Selenide browser launch mode (by default true)
+    - [local] - by default true, for Jenkins shold be set as false
 
     allure generate target/allure-results -o target/allure-report
 
